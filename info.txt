@@ -1,0 +1,35 @@
+- Meetup
+-- C++ DNN algorithm, another algorithm is OpenCV - opencv4nodejs
+-- What the package finds:
+--- it detects faces, and gives a bounding box of where the face is
+--- it gives you the most likely match and a percentage of likelyhood
+- We are going to use a library called FaceRecognition
+- you need to use a package called dlib
+
+- First you detect faces
+-- it extracts those detected faces, and allows you to store those detected faces
+- You first locate faces, then detect faces
+- He was using graphic magic to draw the detected face squares on an image
+
+- Recognition
+-- you train the model by calling faceRecognizer.addFace(faceImage, personName)
+-- once it has read all of the image files then you can save that model state
+--- you can save the state as a string of binary data
+
+- Prediction
+-- you call recognizer.Predict(image),
+
+Assignment
+- Draw rectangles with the matching person name underneath
+
+How hard was it to get dlib setup?
+
+- How did I get this working?
+-- NOTE: I already had XCode installed, which is used by this in some way
+-- first I installed GraphicsMagic
+--- brew install graphicsmagick
+-- then I installed cmake
+--- brew install cmake
+-- Then installed the face-detection npm pacakge, this appears to have built dlib
+--- npm install --save face-recognition
+--- npm install --save gm
